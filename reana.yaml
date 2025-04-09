@@ -1,0 +1,15 @@
+version: 0.9.4
+inputs:
+  files:
+    - Snakefile
+    - openfile.py
+workflow:
+  type: snakemake
+  file: Snakefile
+  resources:
+    cvmfs:
+      - sft.cern.ch
+      - unpacked.cern.ch
+outputs:
+  files:
+    - rootfile.root
